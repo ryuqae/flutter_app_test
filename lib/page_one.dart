@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_test/mypage.dart';
+import 'package:flutter_app_test/listview.dart';
+import 'package:flutter_app_test/whoami.dart';
 
 const fontsize = 18.0;
 
@@ -53,7 +54,10 @@ class RoundedButton extends StatelessWidget {
 void sendToPage(int page, ctx) {
   if (page == 1) {
     Navigator.push(ctx, MaterialPageRoute(builder: (ctx) => const PageOne()));
+  } else if (page == 2) {
+    Navigator.push(
+        ctx, MaterialPageRoute(builder: (ctx) => const ListViewPage()));
   } else {
-    Navigator.push(ctx, MaterialPageRoute(builder: (ctx) => const MyPage()));
+    Navigator.push(ctx, MaterialPageRoute(builder: (ctx) => const WhoAmI()));
   }
 }

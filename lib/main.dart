@@ -1,14 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_test/mypage.dart';
+import 'package:flutter_app_test/listview.dart';
+import 'package:flutter_app_test/onboarding.dart';
 import 'package:flutter_app_test/page_one.dart';
-import 'package:flutter_app_test/page_two.dart';
+import 'package:flutter_app_test/whoami.dart';
 
 const fontsize = 18.0;
 const email = 'ryuqae@gmail.com';
 const name = 'jeongwoo';
 
-void main() => runApp(const MaterialApp(home: MyApp()));
+void main() => runApp(const MaterialApp(home: OnBoardingPage()));
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -20,8 +20,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   static const _widgetOptions = <Widget>[
     PageOne(),
-    PageTwo(),
-    MyPage(),
+    ListViewPage(),
+    WhoAmI(),
   ];
   int _selectedIndex = 0;
 
@@ -35,8 +35,8 @@ class _MyAppState extends State<MyApp> {
                 label: 'Main',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.business),
-                label: 'Second',
+                icon: Icon(Icons.phone_callback),
+                label: 'Contact',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.person),
